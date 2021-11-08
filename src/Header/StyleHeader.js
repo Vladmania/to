@@ -1,7 +1,7 @@
-import React from "react";
 import styled from 'styled-components';
 
-const HeaderTodo = styled.header`
+
+export const HeaderTodo = styled.header`
   text-align: center;
   position: relative;
    h1{
@@ -12,14 +12,3 @@ const HeaderTodo = styled.header`
     text-rendering: optimizelegibility;
    }
 `
-
-
-export class Header extends React.Component{
-    render(){
-        return(
-      <HeaderTodo >
-        <h1>Todos</h1>
-      </HeaderTodo>
-        )
-    }
-}

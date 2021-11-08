@@ -1,7 +1,7 @@
 import React from "react";
 import {DivApp } from './Style'
 import {v4} from "uuid"
-import { Footer } from "./Footer";
+import{ Footer} from "../Foooter/Footer"
 
 
 
@@ -94,22 +94,22 @@ export class Todolist extends React.Component{
         return(
             <><DivApp className="App">
             <input
-                  className ="InputTodo"
+                  className ="App_inputTodo"
                   placeholder="What needs to be done?"
                   value= {this.state.newItem}
                   onChange={(e) => this.updateInput("newItem" ,e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" ? this.addItem(): ''} 
                   />
                            
-                <ul className = 'ullist'>
+                <ul className = 'App_ullist'>
                 {this.state.list.map(item => {
                   
                    return (
                       
-                      <> {this.filterItem(item) ? <li className = "lists" key={item.id}>
-                        <div><input onChange={() => this.doneTodo(item.id)} className="checkboxTodo" type="checkbox"></input>
-                        <label className={item.status ? "done" : ""}>{item.value}</label></div>
-                        <button className = "todobutton" onClick={() => this.deleteItem(item.id)}>X</button>
+                      <> {this.filterItem(item) ? <li className = "App_lists" key={item.id}>
+                        <div><input onChange={() => this.doneTodo(item.id)} className="App_checkboxTodo" type="checkbox"></input>
+                        <label className={item.status ? "App_done" : ""}>{item.value}</label></div>
+                        <button className = "App_todobutton" onClick={() => this.deleteItem(item.id)}>X</button>
                       </li>: ''}</>
                     );
                   })}

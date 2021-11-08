@@ -11,7 +11,7 @@ body{
 .checkboxTodo{
   margin: 10px 20px 5px;
 }
-.done{
+.App_done{
   text-decoration: line-through;
   color: rgba(73, 67, 67, 0.527);
 }
